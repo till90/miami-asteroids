@@ -1,0 +1,107 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0d0021;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#gameCanvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ── Mobile Touch Controls ────────────────────────────────────────────────── */
+#touchControls {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media (pointer: coarse) {
+  #touchControls {
+    display: block;
+  }
+}
+
+.touch-btn {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 245, 255, 0.5);
+  background: rgba(0, 245, 255, 0.08);
+  color: rgba(0, 245, 255, 0.7);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  touch-action: none;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 12px rgba(0, 245, 255, 0.3);
+  transition: background 0.1s, box-shadow 0.1s;
+}
+
+.touch-btn:active {
+  background: rgba(0, 245, 255, 0.25);
+  box-shadow: 0 0 24px rgba(0, 245, 255, 0.7);
+}
+
+#touchLeft {
+  left: 20px;
+  bottom: 50px;
+}
+
+#touchThrust {
+  left: 110px;
+  bottom: 80px;
+  border-color: rgba(255, 45, 120, 0.5);
+  color: rgba(255, 45, 120, 0.8);
+  background: rgba(255, 45, 120, 0.08);
+  box-shadow: 0 0 12px rgba(255, 45, 120, 0.3);
+}
+
+#touchThrust:active {
+  background: rgba(255, 45, 120, 0.25);
+  box-shadow: 0 0 24px rgba(255, 45, 120, 0.7);
+}
+
+#touchRight {
+  left: 200px;
+  bottom: 50px;
+}
+
+#touchFire {
+  right: 30px;
+  bottom: 60px;
+  width: 80px;
+  height: 80px;
+  font-size: 28px;
+  border-color: rgba(180, 0, 255, 0.6);
+  color: rgba(180, 0, 255, 0.8);
+  background: rgba(180, 0, 255, 0.1);
+  box-shadow: 0 0 16px rgba(180, 0, 255, 0.4);
+}
+
+#touchFire:active {
+  background: rgba(180, 0, 255, 0.3);
+  box-shadow: 0 0 32px rgba(180, 0, 255, 0.8);
+}

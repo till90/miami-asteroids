@@ -1,3 +1,5 @@
+> **Archiviert am 2026-10-31.** Liegt unter `/root/projects/archived/asteroids`, kein Betrieb mehr (keine systemd-Unit, kein Caddy-Vhost). venv/`node_modules` wurden gelöscht – zum Wiederbeleben siehe `/root/projects/archived/CLAUDE.md`.
+
 # Miami Asteroids 🌴
 
 A classic Asteroids arcade game reimagined with a Miami Vice / synthwave aesthetic.
